@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
               "Holy Quran",
               style: TextStyle(
                   fontSize: 20,
-                  color: Colors.teal,
+                  color: Colors.blue.shade900,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -42,26 +42,40 @@ class SplashScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.07),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(5))),
-            height: MediaQuery.of(context).size.height * .55,
-            width: MediaQuery.of(context).size.width * .8,
-            child: Image.asset(
-              "images/quran.jpg",
-              fit: BoxFit.fill,
-            ),
-          ),
+          Stack(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    color: Color(0xFF1A237E)),
+                height: MediaQuery.of(context).size.height * .6,
+                width: MediaQuery.of(context).size.width * .8,
+                child: Image.asset(
+                  "images/quran.jpg",
+                  //fit: BoxFit.fill,
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                left: MediaQuery.of(context).size.width * .2,
+                child: Container(
+                  height: MediaQuery.of(context).size.height * .06,
+                  width: MediaQuery.of(context).size.width * .4,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                      color: Colors.orange),
+                  child: Center(
+                    child: Text(
+                      'Get Started',
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
   }
 }
-
-/*decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(10),
-                  bottomRight: Radius.circular(10),
-                  topLeft: Radius.circular(10),
-                  topRight: Radius.circular(10)),
-            ),*/
