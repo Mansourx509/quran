@@ -2,8 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
-  static const String id = "SplashScreen";
+import '../constants.dart';
+
+class GetSatarted extends StatelessWidget {
+  static const String id = "GetSatarted";
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +49,7 @@ class SplashScreen extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
-                    color: Color(0xFF1A237E)),
+                    color: kMainColor),
                 height: MediaQuery.of(context).size.height * .6,
                 width: MediaQuery.of(context).size.width * .8,
                 child: Image.asset(
@@ -62,7 +64,7 @@ class SplashScreen extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * .06,
                   width: MediaQuery.of(context).size.width * .4,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                       color: Colors.orange),
                   child: Center(
                     child: Text(
@@ -71,9 +73,9 @@ class SplashScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
-          )
+          ),
         ],
       ),
     );
