@@ -95,6 +95,22 @@ class _HomePageState extends State<HomePage> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                    width: MediaQuery.of(context).size.width * .3,
+                    height: MediaQuery.of(context).size.height * .2,
+                    child: Image.asset("images/splash.png")),
+                Container(
+                    width: MediaQuery.of(context).size.width * .3,
+                    height: MediaQuery.of(context).size.height * .2,
+                    child: Image.asset("images/mosque.png")),
+              ],
+            ),
+            SizedBox(
+              height: 70,
+            ),
             Center(
               child: Container(
                 color: Colors.orange,
