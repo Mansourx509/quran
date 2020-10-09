@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:holy_quran/screens/getStarted_screen.dart';
+import 'package:holy_quran/view/getStarted_screen.dart';
 
 import '../constants.dart';
 
@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Container(
                 width: MediaQuery.of(context).size.width * .3,
                 height: MediaQuery.of(context).size.height * .2,
-                child: CircleAvatar(child: Image.asset("images/splash.jpg"))),
+                child: Image.asset("images/splash.jpg")),
           )
         ],
       ),

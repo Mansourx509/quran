@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:holy_quran/view/homePage_screen.dart';
 
 import '../constants.dart';
 
@@ -67,9 +68,14 @@ class GetSatarted extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                       color: Colors.orange),
                   child: Center(
-                    child: Text(
-                      'Get Started',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, HomePage.id);
+                      },
+                      child: Text(
+                        'Get Started',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
                     ),
                   ),
                 ),
